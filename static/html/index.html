@@ -3,15 +3,327 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Amazon clone</title>
   <link rel="stylesheet" href="/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="navBar">
-    <img id="logoImage" src="/images/Amazon-logo.jpg" alt="">
-    <button class="navElement">login</button>
-    <p class="navElement">kkkkkkkk</p>
- <h1 class="navElement">jjjjjj</h1>
+<header>
+  <nav class="navBar">
+    <div class="leftNavSection">
+      <div>
+        <img class="amazonLogo" src="/images/amazonLogo.png" alt="">
+      </div>
+    <div class="locationNav">
+      <p id="userLocation">
+        Delivering to Riyadh
+      </p>
+      <p id="chooseLocation">
+        Update location
+      </p>
+    </div>
+    </div>
+    <div class="meddleNavSection">
+      <div id="dropDownNav">
+        <button id="dropDownNavBtn">All</button>
+        <div id="dropDownNavContent">
+          <a href="#">Item 1</a>
+          <a href="#">Item 2</a>
+          <a href="#">Item 3</a>
+        </div>
+      </div>
+      <input type="text" name="" id="searchBar" placeholder="Search">
+      <div id="searchIcon">
+         <button id="searchIconBtn">
+          <img id="searchIconImg" src="/images/SearchIcon_320926.jpg" alt="">
+         </button>
+      </div>
+    </div>
+    <div class="rightNavSection">
+      <div id="dropDownCoun">
+        <button id="dropDownCounBtn">SA</button>
+        <div id="dropDownCounContent">
+          <a href="#">Ksa</a>
+          <a href="#">Syr</a>
+          <a href="#">Usa</a>
+        </div>
+      </div>
+      <div id="profileNav">
+         <p id="helloNav">
+           Hello, sign in
+         </p>
+         <div id="profileNavPar">
+          <p id="AccountParNav"> 
+           Account & Lists &#129031;
+         </p>
+         <div id="profileInfoNav">
+          <div>
+            <h3>
+              Your Lists
+            </h3>
+            <a href="#">
+              Create a List
+            </a>
+          </div>
+          <div>
+            <h3>
+              Your Account
+            </h3>
+            <a href="#">
+              Your Account
+            </a>
+            <a href="#">
+              Your Orders
+            </a>
+            <a href="#">
+              Your Addresses
+            </a>
+            <a href="#">
+              Your Lists
+            </a>
+            <a href="#">
+              Your Recommendations
+            </a>
+            <a href="#">
+              Your Subscribe & Save Items
+            </a>
+            <a href="#">
+              Content & Devices
+            </a>
+            <a href="#">
+              Your Prime Membership
+            </a>
+            <a href="#">
+              Your Seller Account
+            </a>
+          </div>
+         </div>
+        </div>
+      </div>
+      <div id="navOrders">
+        <p id="navReturn">
+          Returns
+        </p> 
+        <a id="navOrdersLink" href="#">
+          & Orders
+         </a>
+      </div>
+      <div id="cartNav">
+        <a href="/html/cart.html" target="_blank">
+          <div id="cartIcon"> 
+          <img id ="cartIconImg" src="/images/cartIcon.jpg" alt="">
+        </div> 
+      </a>
+        <div id="NumItemCard">
+            <p>
+              0
+            </p>
+         </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <body>
+<div id="products">
+<div class="product">
+  <div class="productImgCon">
+  <img class="productImg" src="/images/RobotProduct.jpeg" alt="">
+</div>
+<h3>
+  Amazon Astro
+</h3>
+<p>
+  Household robot for home monitoring, with Alexa.
+</p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+    <img class="productImg" src="/images/alexaDevice.jpg" alt="">
   </div>
+  <h3>
+    Echo & Alexa Devices
+  </h3>
+  <p>
+    Play music, control your smart home, get information, and more using just your voice.
+  </p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+    <img class="productImg" src="/images/tabletProduct.jpg" alt="">
+  </div>
+  <h3>
+    Smart Home
+  </h3>
+  <p>
+    Create a smart and connected home with Alexa and products from Amazon.
+  </p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+    <img class="productImg" src="/images/kidsProduct.png" alt="">
+  </div>
+  <h3>
+    Amazon Kids
+  </h3>
+  <p>
+    Devices and content designed just for kids to safely learn, grow and explore.
+  </p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+    <img class="productImg" src="/images/notbookProduct.png" alt="">
+  </div>
+  <h3>
+    Kindle E-readers
+  </h3>
+  <p>
+    The best devices for reading and writing, period. Hold thousands of books with no screen glare.
+  </p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+    <img class="productImg" src="/images/speakerProduct.jpeg" alt="">
+  </div>
+  <h3>
+    Home Security from Amazon
+  </h3>
+  <p>
+    Protect your entire home with security systems and cameras from Amazon.
+  </p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+  <img class="productImg" src="/images/fireTv.png" alt="">
+</div>
+<h3>
+  Fire TV
+</h3>
+<p>
+  Stream over 1.5 Million TV episodes and movies. Watch favorites from Netflix, Prime Video, Disney+, Max , and more.
+</p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+  <img class="productImg" src="/images/tablets.jpeg" alt="">
+</div>
+<h3>
+  Fire Tablets
+</h3>
+<p>
+  Powerful tablets designed for entertainment—at an affordable price.
+</p>
+</div>
+<div class="product">
+  <div class="productImgCon">
+  <img class="productImg" src="/images/controller.jpeg" alt="">
+</div>
+<h3>
+  Amazon Luna
+</h3>
+<p>
+  Play games like you stream movies. Luna is a cloud gaming service that lets you play games on devices you already own.
+</p>
+</div>
+</div>
 </body>
+<footer>
+  <div class="footer">
+    <div id="footerLeft" class="footerElm">
+      <h3>
+        Get to Know Us
+      </h3>
+      <a>
+        Careers
+      </a>
+      <a>
+        Blog
+      </a>
+      <a>
+        About Amazon
+      </a>
+      <a>
+        Investor Relations
+      </a>
+      <a>
+        Amazon Devices
+      </a>
+      <a>
+        Amazon Science
+      </a>
+    </div>
+    <div class="footerElm">
+      <h3>
+        Make Money with Us
+      </h3>
+      <a>
+        Sell products on Amazon
+      </a>
+      <a>
+        Sell on Amazon Business
+      </a>
+      <a>
+        Sell apps on Amazon
+      </a>
+      <a>
+        Become an Affiliate
+      </a>
+      <a>
+        Advertise Your Products
+      </a>
+      <a>
+        Self-Publish with Us
+      </a>
+      <a>
+        Host an Amazon Hub
+      </a>
+      <a>
+        &#11162;See More Make Money with Us
+      </a>
+    </div>
+    <div class="footerElm">
+      <h3>
+        Amazon Payment Products
+      </h3>
+      <a>
+        Amazon Business Card
+      </a>
+      <a>
+        Shop with Points
+      </a>
+      <a>
+        Reload Your Balance
+      </a>
+      <a>
+        Amazon Currency Converter
+      </a>
+    </div>
+    <div id="footerRight" class="footerElm">
+      <h3>
+        Let Us Help You
+      </h3>
+      <a>
+        Amazon and COVID-19
+      </a>
+      <a>
+        Your Account
+      </a>
+      <a>
+        Your Orders
+      </a>
+      <a>
+        Shipping Rates & Policies
+      </a>
+      <a>
+        Returns & Replacements
+      </a>
+      <a>
+        Manage Your Content and Devices
+      </a>
+      <a>
+        Help
+      </a>
+    </div>
+  </div>
+</footer>
 </html>

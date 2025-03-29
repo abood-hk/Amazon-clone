@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon clone</title>
+  <title>Cart</title>
   <link rel="stylesheet" href="/css/cartStyle.css">
+  <link rel="stylesheet" href="/css/navFooterStyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,7 +14,9 @@
   <nav class="navBar">
     <div class="leftNavSection">
       <div>
-        <img class="amazonLogo" src="/images/amazonLogo.png" alt="">
+        <a target="_blank" href="/html/index.html">
+          <img class="amazonLogo" src="/images/amazonLogo.png" alt="">
+        </a>
       </div>
     <div class="locationNav">
       <p id="userLocation">
@@ -114,58 +117,166 @@
           <div id="cartIcon"> 
           <img id ="cartIconImg" src="/images/cartIcon.jpg" alt="">
         </div> 
-      </a>
         <div id="NumItemCard">
             <p>
               0
             </p>
          </div>
+        </a>
       </div>
+    </div>
+    <div class="burgerMenu js-burgerMenu">
+      <div> </div>
+      <div> </div>
+      <div> </div>
     </div>
   </nav>
 </header>
-<body>
-<div id="shoppingCart">
-  <div id="topElm">
-   <h2>
-    Shopping Cart
-  </h2>
+  <body>
+    <div class="sideMenu js-sideMenu">
+      <p>Choose your country</p>
+      <p>Orders & Returns</p>
+      <p>Account Information</p>
+      <a target="_blank" style="text-decoration: none;color: white;" href="/html/cart.html">
+        <p style="padding-bottom: -100px;">Cart</p>
+      </a>
+      <p>Sign in</p>
+    </div>
+<div id="entireCart">
+  <div id="shoppingCart">
+    <div id="topElm">
+    <h2>
+      Shopping Cart
+    </h2>
+    </div>
+    <div class="js-Cart" id="meddleElm">
+    
   </div>
-  <div id="meddleElm">
-    <div id="cartImgCon">
-      <img src="/images/RobotProduct.jpeg" alt="">
-    </div>
-    <div id="meddleElmCon">
-    <div>
-      <p>Amazon Astro Household robot for home monitoring, with Alexa.</p>
-    </div>
-    <div>
-      <p>
-        In Stock
+  <div class="js-Total" id="bottomElm">
+    Subtotal (1 item): <b>$11.99</b>
+  </div>
+  </div>
+  <div id="checkoutDiv">
+    <div id="totalPriceText">
+      <p class="js-Total">
+        Subtotal (1 item): <b>$11.99</b>
       </p>
-      <p>
-        FREE International Returns
-      </p>
     </div>
-    <div>
-      <a href="#">
-        delete
-      </a>
-      <a href="#">
-        Save for later
-      </a>
-      <a href="#">
-        Compare with similar items
-      </a>
-      <a href="#">
-        share
-      </a>
+    <div id="checkouBtnCon">
+      <a target="_blank" href="/html/checkout.html">
+      <button id="checkouBtn">
+        Proceed to checkout
+      </button>
+    </a>
     </div>
-  </div>
-  </div>
- 
-  <div id="bottomElm">
-    Subtotal (1 item): $11.99
-  </div>
+</div>
+</div>
+<div id="lowerHalf">
+<h3>
+  Other Products You Might Be Intrested In
+</h3>
+<div class="js-products" id="otherProducts">
+</div>
 </div>
 </body>
+<footer>
+  <div class="footer">
+    <div id="footerLeft" class="footerElm">
+      <h3>
+        Get to Know Us
+      </h3>
+      <a>
+        Careers
+      </a>
+      <a>
+        Blog
+      </a>
+      <a>
+        About Amazon
+      </a>
+      <a>
+        Investor Relations
+      </a>
+      <a>
+        Amazon Devices
+      </a>
+      <a>
+        Amazon Science
+      </a>
+    </div>
+    <div class="footerElm">
+      <h3>
+        Make Money with Us
+      </h3>
+      <a>
+        Sell products on Amazon
+      </a>
+      <a>
+        Sell on Amazon Business
+      </a>
+      <a>
+        Sell apps on Amazon
+      </a>
+      <a>
+        Become an Affiliate
+      </a>
+      <a>
+        Advertise Your Products
+      </a>
+      <a>
+        Self-Publish with Us
+      </a>
+      <a>
+        Host an Amazon Hub
+      </a>
+      <a>
+        &#11162;See More Make Money with Us
+      </a>
+    </div>
+    <div class="footerElm">
+      <h3>
+        Amazon Payment Products
+      </h3>
+      <a>
+        Amazon Business Card
+      </a>
+      <a>
+        Shop with Points
+      </a>
+      <a>
+        Reload Your Balance
+      </a>
+      <a>
+        Amazon Currency Converter
+      </a>
+    </div>
+    <div id="footerRight" class="footerElm">
+      <h3>
+        Let Us Help You
+      </h3>
+      <a>
+        Amazon and COVID-19
+      </a>
+      <a>
+        Your Account
+      </a>
+      <a>
+        Your Orders
+      </a>
+      <a>
+        Shipping Rates & Policies
+      </a>
+      <a>
+        Returns & Replacements
+      </a>
+      <a>
+        Manage Your Content and Devices
+      </a>
+      <a>
+        Help
+      </a>
+    </div>
+  </div>
+</footer>
+<script src="/JavaScript/navBar.js"></script>
+<script src="/JavaScript/Cart.js"></script>

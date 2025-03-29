@@ -1,321 +1,199 @@
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-body{
-  margin: 0;
-  font-family: Roboto;
-  padding-top: 57px;
-}
-
-.navBar{
-  background-color: rgb(0, 0, 0);
-  color: white;
-  display: flex;
-  height: 50px;
-  flex-direction: row;
-  position: fixed;
-  justify-content: space-between;
-  top: 0;
-  left: 0;
-  right: 0;
+#entireCart{
+display: grid;
+grid-template-columns: 1fr 250px;
 
 }
-.leftNavSection{
-  max-width: 330px;
-  min-width: 280px;
-  display: flex;
-  padding-left: 6px;
-}
-.meddleNavSection{
-  flex: 1;
-  min-width: 100px;
-  margin: 3px 0px 3px 0px;
-  display: flex;
-  transition: box-shadow 0.15s;
-}
-.rightNavSection{
-  max-width: 430px;
-  min-width: 380px;
-  display: flex;
-  background-color: black;
-  margin-left: 4px;
-  margin-top: 2px;
-}
-.meddleNavSection:hover{
-  box-shadow: 0px 0px 11px black;
-}
-.locationNav p{
-  margin-top: 3px;
-  margin-left: 8px;
-  line-height: 19px;
-  white-space: nowrap;
-}
-.amazonLogo{
-  margin-top: 12px;
-  margin-left: 10px;
-  width: 105px;
-  margin-right: 10px;
-}
-.locationNav{
-  flex: 1;
-}
-#searchBar{
-  flex: 1;
-  border: 0;
-  min-width: 10px;
-}
-#userLocation{
+.smallText{
   font-size: 13px;
-  font-weight: 300;
+  margin: -10px -7px 0px 0px;
 }
-#chooseLocation{
-  margin-top: -13px;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
+.meddleSizeText{
+font-size: 15px;
+font-weight: 400;
+color: #000000;
 }
-/* Dropdown Button */
-/* Dropdown Button */
-#dropDownNavBtn {
-  background-color: #f0f0f0;
-  color: rgb(75, 74, 74);
-  padding: 13px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-border: 0;
-}
-
-/* Dropdown Container */
-#dropDownNav {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Initially Hidden) */
-#dropDownNavContent {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-#dropDownNavContent a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s;
-}
-
-/* Hover Effect for Links */
-#dropDownNavContent a:hover {
-  background-color: #ddd;
-}
-
-/* Show dropdown when hovering over #dropDownNav */
-#dropDownNav:hover #dropDownNavContent {
-  display: block;
-}
-
-/* Change the background of the button on hover */
-#dropDownNav:hover #dropDownNavBtn {
-  background-color: #bab9b9;
-}
-#searchIcon{
-  margin-top: 0px;
-  margin-left: -2px;
-
-}
-#searchIconBtn{
-  transition: background-color 0.3s;
-  background-color: #f0f0f0;
-  border: 0;
-}
-#searchIconImg{
-  width: 38px;
-  mix-blend-mode: multiply;
-}
-#searchIconBtn:hover{
-  background-color: #e0e0e0;
-}
-#dropDownCounBtn {
-  background-color: #000000;
-  color: rgb(245, 245, 245);
-  padding: 13px 20px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* Dropdown Container */
-#dropDownCoun {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Initially Hidden) */
-#dropDownCounContent {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-#dropDownCounContent a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s;
-  font-size: 17px;
-}
-
-/* Hover Effect for Links */
-#dropDownCounContent a:hover {
-  background-color: #ddd;
-}
-
-/* Show dropdown when hovering over #dropDownNav */
-#dropDownCoun:hover #dropDownCounContent {
-  display: block;
-}
-
-/* Change the background of the button on hover */
-#dropDownCoun:hover #dropDownCounBtn {
-  background-color: #1d1b1b;
-}
-#profileNav p{
-  margin-top: 3px;
-  margin-left: 8px;
-  line-height: 19px;
-  white-space: nowrap;
-}
-#helloNav{
-  font-size: 14px;
-  margin-bottom: -5px;
-  font-weight: 300;
-}
-#profileNavPar{
-  display: inline-block;
-}
-#profileNav{
-  position: relative;
-}
-#AccountParNav{
-font-size: 17px;
-font-weight: bold;
-cursor: pointer;
-font-weight: 500;
-}
-#profileInfoNav {
-  position: absolute;
-  background-color: #ededed;
-  display: none;
-  z-index: 1;
-  left: -90px;
-  padding-right: 400px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-}
-#profileInfoNav a{
-  text-decoration: none;
-  color: rgb(53, 53, 53);
-  white-space: nowrap;
-  display: flex;
-  line-height: 24px;
-  font-weight: 500;
-}
-#profileInfoNav h3{
-  color: black;
-  white-space: nowrap;
-  margin-bottom:8px;
-  font-weight: 650;
-}
-#profileNavPar:hover #profileInfoNav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 80px;
-  box-shadow: 0px 0px 3px black;
-}
-#navOrders{
-    margin-top: 12px;
-    margin-left: 17px;
-    font-size: 17px;
-  }
-#navOrdersLink{
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: 17px;
-}
-#cartNav{
-  margin-left: 25px;
-  position: relative;
-  margin-top: 5px;
-}
-#cartIconImg{
-  width: 40px;
-}
-#cartIcon{
-  margin-right: 5px;
-  cursor: pointer;
-}
-#NumItemCard{
-  position: absolute;
-  left: 11px;
-  top:-14px;
-  height: 8px;
-  z-index: 4;
-  margin: 1px;
-  cursor: pointer;
-}
-#NumItemCard p{
-  background-color: black;
-  border-radius: 20px;
-  padding: 1px 7px;
-  font-size: 14px;
-}
-#navReturn{
-  margin-top: -8px;
-  margin-bottom: -1px;
-  font-size: 14px;
-  font-weight: 300;
-}
-/*
-End of nav
-*/
 #shoppingCart{
+  border: solid 1px rgb(165, 165, 165);
   display: flex;
   flex-direction: column;
-  background-color: #000000;
+  background-color: whitesmoke;
+  margin: 0px 10px;
+  flex: 1;
+}
+#checkoutDiv{
+  max-width: 250px;
+  margin-right: 8px;
+  max-height: 120px;
+  border: solid 1px rgba(136, 136, 136, 0.877);
 }
 #topElm{
   flex: 1;
-  background-color: red;
+  padding-left: 8px;
+  border-bottom: solid 1px rgba(136, 136, 136, 0.877);
 }
 #meddleElm{
   flex: 2;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  border-bottom: solid 1px rgba(136, 136, 136, 0.877);
+  padding-bottom: 5px;
+  margin-top: 7px;
+}
+.CartItem{
   display: flex;
   flex-direction: row;
+  margin-bottom: 13px;
+  border-bottom: solid 1px rgba(136, 136, 136, 0.877);
+  padding-bottom: 5px;
 }
+.productDisc{
+font-size: 17px;
+font-weight: 500; 
+padding-right: 7px; 
+}
+.removeButton{
+  display: flex;
+  column-gap: 20px;
+  font-weight: 500;
+}
+.removeButton button{
+  border-radius: 20px;
+  border: solid 1px rgba(71, 71, 71, 0.877);
+  transition: background-color 0.3s;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+.removeButton button:hover{
+background-color: rgb(229, 229, 229);
+}
+
 #cartImgCon{
-flex: 1;
+  max-width: 370px;
+  min-width: 370px;
+  margin-right: 8px;
+}
+#cartImgCon img{
+  width: 100%;
 }
 #meddleELmCon{
-flex: 77;
+flex: 1;
 }
 #bottomElm{
   flex:1;
-  background-color: yellow;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+#avaibalityText{
+  color: #007600;
+}
+#checkoutDiv{
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 10px 30px;
+}
+#totalPriceText{
+  font-size: 16px;
+  font-weight: 500;
+}
+#checkouBtn{
+  background-color: rgb(236, 236, 6);
+  border-radius: 10px;
+  border: solid 1px rgba(136, 136, 136, 0.877);
+  align-self: center;
+  padding: 2px 30px;
+  white-space: nowrap;
+  font-size: 15px;
+  cursor: pointer;
+}
+#otherProducts{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  padding: 0px 20px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 30px;
+  border-top: solid 1px rgba(136, 136, 136, 0.877);
+  padding-top: 10px;
+}
+#product{
+border-left: solid 1px black;
+padding-left: 10px;
+transition: box-shadow 0.3s;
+}
+#product:hover{
+box-shadow: 0px 2px 2px black;
+}
+#otherProducts a{
+  text-decoration: none;
+  color: #000000;
+}
+#lowerHalf{
+  margin-top: 10px;
+  border-top: solid 1px rgba(136, 136, 136, 0.877);
+}
+#lowerHalf h3{
+  padding-left: 10px;
+  font-size: 21px;
+}
+#lowerHalf h4{
+  margin-bottom: -2px;
+}
+#otherProducts button{
+  background-color: rgb(236, 236, 6);
+  border-radius: 10px;
+  border: solid 1px rgba(136, 136, 136, 0.877);
+  align-self: center;
+  padding: 2px 20px;
+  white-space: nowrap;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+.cartSec{
+  display: flex;
+  column-gap: 10px;
+}
+.cartSec p{
+  font-weight: 500;
+}
+@media(max-width:1200px){
+#entireCart{
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+  #checkoutDiv{
+    max-width: 500px;
+    align-self: center;
+    padding: 20px 70px 120px 70px;
+    white-space: nowrap;
+  } 
+}
+
+
+@media(max-width:850px){
+#otherProducts{
+  grid-template-columns: 1fr 1fr;
+}
+}
+@media(max-width:670px){
+  .CartItem{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7px;
+    margin-bottom: 13px;
+    border-bottom: solid 1px rgba(136, 136, 136, 0.877);
+  }
+  #cartImgCon{
+    max-width: 550px;
+    min-width: 200px;
+    align-self: center;
+  }
 }

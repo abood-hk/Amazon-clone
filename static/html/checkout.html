@@ -14,7 +14,7 @@
   <nav class="navBar">
     <div class="leftNavSection">
       <div>
-        <a target="_blank" href="/html/index.html">
+        <a href="/html/index.html">
         <img class="amazonLogo" src="/images/amazonLogo.png" alt="">
       </a>
       </div>
@@ -113,12 +113,12 @@
          </a>
       </div>
       <div id="cartNav">
-        <a href="/html/cart.html" target="_blank">
+        <a href="/html/cart.html">
           <div id="cartIcon"> 
           <img id ="cartIconImg" src="/images/cartIcon.jpg" alt="">
         </div> 
         <div id="NumItemCard">
-            <p>
+            <p class="js-NumberCart">
               0
             </p>
          </div>
@@ -133,11 +133,13 @@
   </nav>
 </header>
   <body>
+    <div class="overlay js-overlay"></div>
     <div class="sideMenu js-sideMenu">
+      <p><a href="/html/index.html">Home</a></p>
       <p>Choose your country</p>
       <p>Orders & Returns</p>
       <p>Account Information</p>
-      <a target="_blank" style="text-decoration: none;color: white;" href="/html/cart.html">
+      <a style="text-decoration: none;color: white;" href="/html/cart.html">
         <p>Cart</p>
       </a>
       <p>Sign in</p>

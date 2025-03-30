@@ -10,11 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <header>
   <nav class="navBar">
     <div class="leftNavSection">
       <div>
-        <a target="_blank" href="/html/index.html">
+        <a href="/html/index.html">
         <img class="amazonLogo" src="/images/amazonLogo.png" alt="">
       </a>
       </div>
@@ -36,7 +37,7 @@
           <a href="#">Item 3</a>
         </div>
       </div>
-      <input type="text" name="" id="searchBar" placeholder="Search">
+      <input type="text" id="searchBar" placeholder="Search">
       <div id="searchIcon">
          <button id="searchIconBtn">
           <img id="searchIconImg" src="/images/SearchIcon_320926.jpg" alt="">
@@ -113,12 +114,12 @@
          </a>
       </div>
       <div id="cartNav">
-        <a href="/html/cart.html" target="_blank">
+        <a href="/html/cart.html">
           <div id="cartIcon"> 
           <img id ="cartIconImg" src="/images/cartIcon.jpg" alt="">
         </div> 
         <div id="NumItemCard">
-            <p>
+            <p class="js-NumberCart">
               0
             </p>
          </div>
@@ -133,16 +134,18 @@
   </nav>
 </header>
   <body>
+    <div class="overlay js-overlay"></div>
     <div class="sideMenu js-sideMenu">
+      <p><a href="/html/index.html">Home</a></p>
       <p>Choose your country</p>
       <p>Orders & Returns</p>
       <p>Account Information</p>
-      <a target="_blank" style="text-decoration: none;color: white;" href="/html/cart.html">
+      <a style="text-decoration: none;color: white;" href="/html/cart.html">
         <p>Cart</p>
       </a>
       <p>Sign in</p>
     </div>
-<div id="products">
+<div class="js-Products" id="products">
 <div class="product">
   <div class="productImgCon">
   <img class="productImg" src="/images/RobotProduct.jpeg" alt="">
@@ -153,6 +156,10 @@
 <p>
   Household robot for home monitoring, with Alexa.
 </p>
+<p id="price">
+  $20.33
+</p>
+<button>Add To Cart</button>
 </div>
 <div class="product">
   <div class="productImgCon">
@@ -164,6 +171,7 @@
   <p>
     Play music, control your smart home, get information, and more using just your voice.
   </p>
+
 </div>
 <div class="product">
   <div class="productImgCon">
@@ -343,5 +351,7 @@
     </div>
   </div>
 </footer>
+</div>
 <script src="/JavaScript/navBar.js"></script>
+<script src="/JavaScript/home.js"></script>
 </html>

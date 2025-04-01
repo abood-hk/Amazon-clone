@@ -118,6 +118,7 @@ flex: 1;
   white-space: nowrap;
   font-size: 15px;
   cursor: pointer;
+  color: #000000 !important;
   transition: background-color 0.2s;
 }
 #checkouBtn:hover{
@@ -147,6 +148,7 @@ box-shadow: 0px 2px 2px black;
 }
 #otherProducts button{
   transition: background-color 0.2s;
+  color: #000000 !important;
 }
 #otherProducts button:hover{
   background-color: rgb(216, 216, 0);
@@ -173,10 +175,12 @@ box-shadow: 0px 2px 2px black;
   font-size: 15px;
   cursor: pointer;
   margin-bottom: 6px;
+  width: 100%;
 }
 .cartSec{
   display: flex;
   column-gap: 10px;
+  flex-direction: column;
 }
 .cartSec p{
   font-weight: 500;
@@ -201,6 +205,16 @@ box-shadow: 0px 2px 2px black;
   grid-template-columns: 1fr 1fr;
 }
 }
+@media (max-width: 768px) {
+  #entireCart {
+      display: flex;
+      flex-direction: column;
+  }
+  #checkoutDiv {
+    max-width: 100%;
+    padding: 10px;
+}
+}
 @media(max-width:670px){
   .CartItem{
     display: flex;
@@ -213,5 +227,21 @@ box-shadow: 0px 2px 2px black;
     max-width: 550px;
     min-width: 200px;
     align-self: center;
+  }
+}
+@media (max-width: 600px) {
+  #cartImgCon {
+      max-width: 100%;
+      min-width: unset;
+  }
+
+  #cartImgCon img {
+      width: 100%;
+      height: auto;
+  }
+}
+@media (max-width: 500px) {
+  #otherProducts {
+      grid-template-columns: 1fr;
   }
 }

@@ -159,12 +159,12 @@ function updateExtraPro(){
     </p>
   </a>
   <div class="cartSec">
-  <button class="js-cartButton">
-    Add To Cart
-  </button>
   <p class="red">
     $${eProduct.price}
   </p>
+  <button class="js-cartButton">
+    Add To Cart
+  </button>
 </div> 
 </div>
 `; 

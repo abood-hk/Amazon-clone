@@ -28,6 +28,7 @@
   margin-right: 15%;
   cursor: pointer;
   background-color: rgb(231, 231, 0);
+  color: black !important;
   border: solid 1px rgba(136, 136, 136, 0.877);
   transition: background-color 0.2s;
 }

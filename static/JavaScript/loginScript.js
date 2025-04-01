@@ -18,6 +18,7 @@ passwordBox.type="password";
 });
 logeInBtn.addEventListener("click",()=>{
   if(emailBox.value.includes("@")&&passwordBox.value.length>8){
+  localStorage.clear();
   window.location.href="index.html";
   }
   else if(emailBox.value.includes("@")&&passwordBox.value.length<=8){

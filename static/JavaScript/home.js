@@ -130,8 +130,6 @@ buttons.forEach((button,index)=>{
     let place=0;
     cartItems.forEach((cproduct,i)=>{
       if(filteredProducts[index].id===cproduct.id){
-        console.log(cproduct.id);
-        console.log(1);
         include=true;
         place=cproduct.id;
       }

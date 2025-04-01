@@ -170,7 +170,6 @@ function updateExtraPro(){
 `; 
 }
 )
-console.log(extraProducts);
 localStorage.setItem("extraItems",JSON.stringify(extraProducts));
 localStorage.setItem("cartItems",JSON.stringify(cartProducts));
 productsHTML.innerHTML=extraProductsHTML;
@@ -215,8 +214,6 @@ function updateFilteredProducts(){
 }
   searchBar.addEventListener("input",()=>{
     updateFilteredProducts();
-    console.log(filteredProducts);
-    console.log("filtered")
     updateExtraPro();
     updateCartPro();
     updateNumber(); 

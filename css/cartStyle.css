@@ -67,6 +67,7 @@ padding-right: 7px;
   max-height: 40px;
   margin-top: 7px;
   padding: 0px 9px;
+  color: #000000 !important
 }
 .removeButton button:hover{
 background-color: rgb(229, 229, 229);

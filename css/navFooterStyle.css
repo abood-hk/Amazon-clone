@@ -2,13 +2,19 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+input, textarea, select {
+  font-size: 16px;
+}
 body{
   margin: 0;
   font-family: Roboto;
   padding-top: 57px;
   background-color: whitesmoke;
 }
-
+#searchBar:focus {
+  outline: none;
+  box-shadow: 1px 1px 7px black;
+}
 .navBar{
   background-color: rgb(0, 0, 0);
   color: white;
@@ -20,7 +26,13 @@ body{
   top: 0;
   left: 0;
   right: 0;
-
+  border-radius: 0;
+}
+.navBar * {
+  border-radius: 0;
+}
+#dropDownNav, #dropDownCoun {
+  border-radius: 0;
 }
 .leftNavSection{
   max-width: 330px;
@@ -419,6 +431,10 @@ font-weight: 500;
     max-width: 160px;
     min-width: 130px;
   }
+  .navBar {
+    width: 100%;
+    display: flex;
+}
 }
 
 @media(max-width:550px){

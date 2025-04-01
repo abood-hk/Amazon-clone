@@ -108,6 +108,7 @@ line-height: 7px;
   border-radius: 20px;
   border: solid 1px rgba(94, 94, 94, 0.877);
   transition: background-color 0.2s;
+  color: black !important;
 }
 .summaryProduct button:hover{
 background-color:rgb(212, 212, 212) ;

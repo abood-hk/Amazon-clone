@@ -7,63 +7,63 @@ const products=[
     name:"Amazon Astro",
     description:"Household robot for home monitoring, with Alexa.",
     price:20.99,
-    image:"/images/RobotProduct.jpeg"
+    image:"../images/RobotProduct.jpeg"
   },
   {
     id:2,
     name:"Echo & Alexa Devices",
     description:"Play music, control your smart home, get information, and more using just your voice.",
     price:17.45,
-    image:"/images/alexaDevice.jpg"
+    image:"../images/alexaDevice.jpg"
   },
   {
     id:3,
     name:"Smart Home",
     description:"Create a smart and connected home with Alexa and products from Amazon.",
     price:14.13,
-    image:"/images/tabletProduct.jpg"
+    image:"../images/tabletProduct.jpg"
   },
   {
     id:4,
     name:"Amazon Kids",
     description:"Devices and content designed just for kids to safely learn, grow and explore.",
     price:30.87,
-    image:"/images/kidsProduct.png"
+    image:"../images/kidsProduct.png"
   },
   {
     id:5,
     name:"Kindle E-readers",
     description:"The best devices for reading and writing, period. Hold thousands of books with no screen glare.",
     price:25.32,
-    image:"/images/notbookProduct.png"
+    image:"../images/notbookProduct.png"
   },
   {
     id:6,
     name:"Home Security from Amazon",
     description:"Protect your entire home with security systems and cameras from Amazon.",
     price:32.12,
-    image:"/images/speakerProduct.jpeg"
+    image:"../images/speakerProduct.jpeg"
   },
   {
     id:7,
     name:"Fire TV",
     description:"Stream over 1.5 Million TV episodes and movies. Watch favorites from Netflix, Prime Video, Disney+, Max , and more.",
     price:57.45,
-    image:"/images/fireTv.png"
+    image:"../images/fireTv.png"
   },
   {
     id:8,
     name:"Fire Tablets",
     description:"Powerful tablets designed for entertainment—at an affordable price.",
     price:21.75,
-    image:"/images/tablets.jpeg"
+    image:"../images/tablets.jpeg"
   },
   {
     id:9,
     name:"Amazon Luna",
     description:"Play games like you stream movies. Luna is a cloud gaming service that lets you play games on devices you already own.",
     price:56.39,
-    image:"/images/controller.jpeg"
+    image:"../images/controller.jpeg"
   },
 ];
 let extraItems=[];
@@ -241,7 +241,7 @@ if(checkoutItems.length===0){
   document.body.innerHTML=`<div class="Empty">
   <h2>Your Cart Is Unfortunately Empy</h2>
   <h3>Would you Like To Add Items To It?</h3>
-  <a href="/html/index.html">
+  <a href="index.html">
   <button>Go Back To Home Page</button>
   </a>
   </div>`

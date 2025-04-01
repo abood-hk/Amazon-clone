@@ -145,6 +145,7 @@ checkoutItems.forEach((item,index)=>{
 </div>
 </div>
 `
+
 items+=1;
 price=((item.price*100)+(price*100))/100;
 });
@@ -159,6 +160,7 @@ const removeButtons = document.querySelectorAll(".js-RemoveItem");
      updateCheckoutItems();
      updateNumber();
      updateExtraItems();
+     checkNumber();
      localStorage.setItem('extraItems',JSON.stringify(extraItems));
    }
   );
@@ -220,10 +222,8 @@ chooseDate.forEach((button)=>{
   }
 );
 }
-)
-}
-);
-};
+)}
+);};
 function order(){
 const OrderButton=document.querySelector(".js-OrderButton");
 OrderButton.addEventListener("click",()=>{
@@ -232,6 +232,22 @@ window.location.href="Thanks.html";
 })
 };
 const ItemsInCart=document.querySelector(".js-NumberCart");
+
+function checkNumber(){
+if(checkoutItems.length===1){
+  checkOutProducts.classList.add("js-ProductsBottom");
+};
+if(checkoutItems.length===0){
+  document.body.innerHTML=`<div class="Empty">
+  <h2>Your Cart Is Unfortunately Empy</h2>
+  <h3>Would you Like To Add Items To It?</h3>
+  <a href="/html/index.html">
+  <button>Go Back To Home Page</button>
+  </a>
+  </div>`
+}
+}
+checkNumber();
 function updateNumber() {
   ItemsInCart.innerHTML=checkoutItems.length;  
 }

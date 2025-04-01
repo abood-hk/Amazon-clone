@@ -85,6 +85,9 @@ label input{
   display: grid;
   grid-template-columns: 24px 200px;
 }
+.js-ProductsBottom{
+  margin-bottom: 200px;
+}
 .chooseDate p{
 line-height: 7px;
 }
@@ -108,9 +111,38 @@ line-height: 7px;
 .summaryProduct button:hover{
 background-color:rgb(212, 212, 212) ;
 }
+.Empty{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+}
+.Empty h2{
+ font-size: 28px;
+ line-height: 10px;
+}
+.Empty h3{
+line-height: 0px;
+font-weight: 500;
+}
+.Empty button{
+  margin-top: 10px;
+  font-size: 17px;
+  border-radius: 20px;
+  border: solid 1px rgba(94, 94, 94, 0.877);
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+.Empty button:hover{
+  background-color: rgb(215, 215, 215);
+}
 @media(max-width:1220px){
   h2{
     padding-left: 140px;
+  }
+  .js-ProductsBottom{
+    margin-bottom: 0px;
   }
   .checkout{
     display: grid;

@@ -68,9 +68,10 @@ const products=[
 const extraItems=JSON.parse(localStorage.getItem("extraItems"))||products.slice();
 const checkoutItems=JSON.parse(localStorage.getItem("cartItems"))||[];
 const cartProducts=cartItems;
-const extraProducts=extraItems;
+let extraProducts=extraItems;
 let totalPrice=0.00;
 let totalItem=0;
+let filteredProducts=extraProducts.slice();
 function updateCartPro(){
   totalPrice=0.00;
   totalItem=0;
@@ -94,7 +95,7 @@ function updateCartPro(){
         </p>
       </div>
     <div class="removeButton">
-      <p>$${cProduct.price}</p>
+      <p class="red">$${cProduct.price}</p>
       <button class="js-RemoveButton">
         Remove From Cart
       </button>
@@ -105,10 +106,10 @@ totalPrice=((cProduct.price*100)+(totalPrice*100))/100;
 totalItem+=1;
 totalHTML.forEach((total,index)=>{
   if(totalItem==1){
-    total.innerHTML=`Subtotal (${totalItem} item): <b>$${totalPrice.toFixed(2)}</b>`
+    total.innerHTML=`Subtotal (${totalItem} item): <b class="red">$${totalPrice.toFixed(2)}</b>`
     }
     else{
-       total.innerHTML=`Subtotal (${totalItem} items): <b>$${totalPrice.toFixed(2)}</b>`
+       total.innerHTML=`Subtotal (${totalItem} items): <b class="red">$${totalPrice.toFixed(2)}</b>`
     }
   }
 )
@@ -116,10 +117,10 @@ totalHTML.forEach((total,index)=>{
 )
 totalHTML.forEach((total,index)=>{
   if(totalItem==1){
-    total.innerHTML=`Subtotal (${totalItem} item): <b>$${totalPrice.toFixed(2)}</b>`
+    total.innerHTML=`Subtotal (${totalItem} item): <b class="red">$${totalPrice.toFixed(2)}</b>`
     }
     else{
-       total.innerHTML=`Subtotal (${totalItem} items): <b>$${totalPrice.toFixed(2)}</b>`
+       total.innerHTML=`Subtotal (${totalItem} items): <b  class="red">$${totalPrice.toFixed(2)}</b>`
     }
   }
 )
@@ -127,21 +128,25 @@ localStorage.setItem("extraItems",JSON.stringify(extraProducts));
 localStorage.setItem("cartItems",JSON.stringify(cartProducts));
 cart.innerHTML=cartProductHTML;
 const removeBtnHtmL=document.querySelectorAll(".js-RemoveButton");
+function updateButtons(){
 removeBtnHtmL.forEach((button,index)=>{
    button.addEventListener("click",()=>{
       extraProducts.push(cartProducts[index]);
+      filteredProducts=extraProducts;
+      updateFilteredProducts();
       cartProducts.splice(index,1);
       updateCartPro();
       updateExtraPro();
       updateNumber();
    }
   )
+});
 }
-)
+setInterval(updateButtons(),100);
 };
 function updateExtraPro(){
   let extraProductsHTML="";
-  extraProducts.forEach((eProduct,index)=>{
+  filteredProducts.forEach((eProduct,index)=>{
   extraProductsHTML+=`
 <div class="js-Product" id="product"> 
  <a href="#">
@@ -157,7 +162,7 @@ function updateExtraPro(){
   <button class="js-cartButton">
     Add To Cart
   </button>
-  <p>
+  <p class="red">
     $${eProduct.price}
   </p>
 </div> 
@@ -165,27 +170,59 @@ function updateExtraPro(){
 `; 
 }
 )
+console.log(extraProducts);
 localStorage.setItem("extraItems",JSON.stringify(extraProducts));
 localStorage.setItem("cartItems",JSON.stringify(cartProducts));
 productsHTML.innerHTML=extraProductsHTML;
 const addToCart=document.querySelectorAll(".js-cartButton");
+function updateButtons1(){
 addToCart.forEach((button,index)=>{
   button.addEventListener("click",()=>{
-    cartProducts.push(extraProducts[index]);
-    extraProducts.splice(index,1);
+    cartProducts.push(filteredProducts[index]);
+    filteredProducts.splice(index,1);
+    let include=false;
+    extraProducts=products.filter((product)=>{
+      include=false;
+      cartProducts.forEach((cProduct)=>{
+        if(cProduct.id===product.id){
+          include=true;
+        }
+      });
+      if(!include){
+        return product;
+      }
+    });
     updateExtraPro();
     updateCartPro();
     updateNumber();
     }
   );
+});
 }
-);
+setInterval(updateButtons1(),100);
 };
 const totalHTML=document.querySelectorAll(".js-Total");
 const ItemsInCart=document.querySelector(".js-NumberCart");
 function updateNumber() {
   ItemsInCart.innerHTML=cartProducts.length;  
 }
+function updateFilteredProducts(){
+  filteredProducts=extraProducts.filter((eProduct)=>{
+    if(eProduct.name.toLowerCase().includes(searchBar.value.trim().toLowerCase())){
+      return eProduct;
+    }
+  })
+}
+  searchBar.addEventListener("input",()=>{
+    updateFilteredProducts();
+    console.log(filteredProducts);
+    console.log("filtered")
+    updateExtraPro();
+    updateCartPro();
+    updateNumber(); 
+  })
+
+updateFilteredProducts();
 updateNumber();
 updateCartPro();
 updateExtraPro();

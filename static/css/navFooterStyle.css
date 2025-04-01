@@ -71,6 +71,7 @@ display: none;
   transition: transform 0.3s;
   position: fixed;
 
+
 }
 .overlay {
   position: fixed;
@@ -95,16 +96,13 @@ display: none;
 font-size: 18px;
 font-weight: 500;
 cursor: pointer;
-padding-top: 40px;
+padding-top: 35px;
 padding-bottom: 60px;
 padding-left: 10px;
 transition: background-color 0.2s;
 margin-top: 0px;
-
-}
-.sideMenu p a{
-  text-decoration: none;
-  color: white;
+vertical-align: middle;
+max-height: 2px;
 }
 .sideMenu p:hover{
   background-color: gray;

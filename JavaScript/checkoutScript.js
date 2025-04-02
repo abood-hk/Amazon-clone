@@ -87,15 +87,15 @@ let totalShipping=0;
 let choosePrice=[];
 const date=[
   {
-    day:"Tuesday, June 21",
+    day:`${dayjs().add(7,"day").format("dddd, MMMM D")}`,
     price:0.00
   },
   {
-    day:"Wednesday, June 15",
+    day:`${dayjs().add(4,"day").format("dddd, MMMM D")}`,
     price:4.99
   },
   {
-    day:"Monday, June 13",
+    day:`${dayjs().add(1,"day").format("dddd, MMMM D")}`,
     price:9.99
   }
 ];
@@ -107,7 +107,7 @@ checkoutItems.forEach((item,index)=>{
   checkOutProductsHTML+=`
   <div class="summaryProduct">
   <h3 class="js-DeliveryDate">
-    Delivery date: ${date[2].day}
+    Delivery date: ${date[0].day}
   </h3>
   <div class="summaryProductContent">
   <div class="productContainer">
@@ -207,15 +207,15 @@ const chooseDate=document.querySelectorAll(`input[name="date${index}"]`);
 chooseDate.forEach((button)=>{
   button.addEventListener("change",(event)=>{
     DeliveryDate[index].innerHTML=("Delivery date: "+event.target.value);
-    if(event.target.value==="Tuesday, June 21"){
+    if(event.target.value===date[0].day){
       choosePrice[index]=0.00;
       updateSummary();
     }
-    else if(event.target.value==="Wednesday, June 15"){
+    else if(event.target.value===date[1].day){
       choosePrice[index]=4.99;
       updateSummary();
     }
-    else if(event.target.value==="Monday, June 13"){
+    else if(event.target.value===date[2].day){
       choosePrice[index]=9.99;
       updateSummary();
     }

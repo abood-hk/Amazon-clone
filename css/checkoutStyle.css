@@ -208,3 +208,11 @@ font-weight: 500;
     padding-right: 7px;
   }
 }
+@media (max-width:475px) {
+  .Empty h2{
+    font-size: 27px;
+    line-height: 26px;
+    text-align: center;
+    padding-left: 0px;
+   }
+}

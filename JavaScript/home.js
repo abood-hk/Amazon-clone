@@ -1,68 +1,36 @@
 const productsDisplay=document.querySelector('.js-Products');
+class Product{
+  id;
+  name;
+  description;
+  price;
+  image;
+  constructor(id,name,description,price,image){
+    this.id=id;
+    this.name=name;
+    this.description=description;
+    this.price=price;
+    this.image=image;
+  };
+}
 const products=[
-  {
-    id:1,
-    name:"Amazon Astro",
-    description:"Household robot for home monitoring, with Alexa.",
-    price:20.99,
-    image:"../images/RobotProduct.jpeg"
-  },
-  {
-    id:2,
-    name:"Echo & Alexa Devices",
-    description:"Play music, control your smart home, get information, and more using just your voice.",
-    price:17.45,
-    image:"../images/alexaDevice.jpg"
-  },
-  {
-    id:3,
-    name:"Smart Home",
-    description:"Create a smart and connected home with Alexa and products from Amazon.",
-    price:14.13,
-    image:"../images/tabletProduct.jpg"
-  },
-  {
-    id:4,
-    name:"Amazon Kids",
-    description:"Devices and content designed just for kids to safely learn, grow and explore.",
-    price:30.87,
-    image:"../images/kidsProduct.png"
-  },
-  {
-    id:5,
-    name:"Kindle E-readers",
-    description:"The best devices for reading and writing, period. Hold thousands of books with no screen glare.",
-    price:25.32,
-    image:"../images/notbookProduct.png"
-  },
-  {
-    id:6,
-    name:"Home Security from Amazon",
-    description:"Protect your entire home with security systems and cameras from Amazon.",
-    price:32.12,
-    image:"../images/speakerProduct.jpeg"
-  },
-  {
-    id:7,
-    name:"Fire TV",
-    description:"Stream over 1.5 Million TV episodes and movies. Watch favorites from Netflix, Prime Video, Disney+, Max , and more.",
-    price:57.45,
-    image:"../images/fireTv.png"
-  },
-  {
-    id:8,
-    name:"Fire Tablets",
-    description:"Powerful tablets designed for entertainment—at an affordable price.",
-    price:21.75,
-    image:"../images/tablets.jpeg"
-  },
-  {
-    id:9,
-    name:"Amazon Luna",
-    description:"Play games like you stream movies. Luna is a cloud gaming service that lets you play games on devices you already own.",
-    price:56.39,
-    image:"../images/controller.jpeg"
-  },
+  new Product(1,"Amazon Astro","Household robot for home monitoring, with Alexa.",20.99,"../images/RobotProduct.jpeg"),
+
+  new Product(2,"Echo & Alexa Devices","Play music, control your smart home, get information, and more using just your voice.",17.45,"../images/alexaDevice.jpg"),
+
+  new Product(3,"Smart Home","Create a smart and connected home with Alexa and products from Amazon.",14.13,"../images/tabletProduct.jpg"),
+
+  new Product(4,"Amazon Kids","Devices and content designed just for kids to safely learn, grow and explore.",30.87,"../images/kidsProduct.png"), 
+  
+  new Product(5,"Kindle E-readers","The best devices for reading and writing, period. Hold thousands of books with no screen glare.",25.32,"../images/notbookProduct.png"),
+
+  new Product(6,"Home Security from Amazon","Protect your entire home with security systems and cameras from Amazon.",32.12,"../images/speakerProduct.jpeg"),
+
+  new Product(7,"Fire TV","Stream over 1.5 Million TV episodes and movies. Watch favorites from Netflix, Prime Video, Disney+, Max , and more.",57.45,"../images/fireTv.png"),
+  
+  new Product(8,"Fire Tablets","Powerful tablets designed for entertainment—at an affordable price.",21.75,"../images/tablets.jpeg"),
+   
+  new Product(9,"Amazon Luna","Play games like you stream movies. Luna is a cloud gaming service that lets you play games on devices you already own.",56.39,"../images/controller.jpeg"),
 ];
 let extraProducts=[];
 function updateExtraProducts(){
